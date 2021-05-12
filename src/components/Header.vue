@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
       <a class="navbar-brand logo" href="/"
-        ><img src="../assets/img/icons/logo.png" alt="logo"
+        ><img src="../assets/img/logo.png" alt="logo"
       /></a>
       <div
         class="collapse navbar-collapse collapse-fontsize"
@@ -11,15 +11,15 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li
             class="nav-item menu-link"
-            v-for="(menu, index) in headerMenuList"
+            v-for="({name, path}, index) in headerMenuList"
             :key="index"
           >
             <router-link
               class="nav-link active"
               aria-current="page"
-              :to="menu.path"
+              :to="path"
             >
-              {{ menu.name }}
+              {{ name }}
             </router-link>
           </li>
         </ul>
@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import {menuList} from '../constants/menuLinks'
 export default {
   name: "HelloWorld",
   props: {
@@ -42,13 +43,7 @@ export default {
   },
   data() {
     return {
-      headerMenuList: [
-        { name: "Home", path: "/" },
-        { name: "About Us", path: "/about" },
-        { name: "Property", path: "/property" },
-        { name: "Our Blog", path: "/blog" },
-        { name: "Contacts", path: "/contacts" },
-      ],
+      headerMenuList: menuList,
     };
   },
 };
