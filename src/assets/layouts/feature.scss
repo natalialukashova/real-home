@@ -1,0 +1,22 @@
+.feature {
+  padding: 100px 0;
+  background: $featureGrey;
+  text-align: center;
+  &__icon,
+   &__title {
+      padding-bottom: 25px;
+  }
+  &__title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  &__paragraph {
+     font-size: 14px;
+  }
+  &__col {
+     &_pad {
+        padding: 0 20px;
+     }
+  }
+}

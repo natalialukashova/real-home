@@ -20,17 +20,26 @@
         </div>
       </div>
     </div>
+    <Feauters :data="feautereData" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import Carousel from "../components/Carousel";
+import Feauters from "../components/Feauters"
+import { feautereData } from "../data/data.feauters"
 
 export default {
   name: "Home",
   components: {
     Carousel,
+    Feauters,
+  },
+  data() {
+    return {
+      feautereData: feautereData,
+    }
   },
 };
 </script>
