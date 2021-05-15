@@ -1,16 +1,15 @@
 <template>
-  <MainContainer>
+  <div class="container">
     <h1>This is an about page</h1>
-  </MainContainer>
+  </div>
 </template>
 
 <script>
-import MainContainer from '../components/MainContainer'
 
 export default {
   name: 'about',
   components: {
-    MainContainer,
+
   }
   
 }
