@@ -21,6 +21,7 @@
       </div>
     </div>
     <Feauters :data="feautereData" />
+    <Properties :propertiesData="propertiesData" />
   </div>
 </template>
 
@@ -28,17 +29,21 @@
 // @ is an alias to /src
 import Carousel from "../components/Carousel";
 import Feauters from "../components/Feauters"
+import Properties from "../components/Properties"
 import { feautereData } from "../data/data.feauters"
+import { propertiesData } from "../data/data.properties"
 
 export default {
   name: "Home",
   components: {
     Carousel,
     Feauters,
+    Properties,
   },
   data() {
     return {
       feautereData: feautereData,
+      propertiesData: propertiesData,
     }
   },
 };

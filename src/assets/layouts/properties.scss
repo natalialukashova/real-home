@@ -1,0 +1,133 @@
+.properties {
+  text-align: center;
+  padding: 100px 0;
+  background: $propertiesGrey;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  &__h2 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-size: 45px;
+    padding-bottom: 40px;
+    position: relative;
+    margin-bottom: 30px;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 110px;
+      height: 3px;
+      background: $red;
+    }
+  }
+  &__h2 span {
+    font-weight: 500;
+  }
+  &__col {
+    border: 1px solid $propertiesBorderGrey;
+    padding: 0;
+    max-width: 365px;
+    width: 100%;
+    margin-bottom: 30px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__subtitle {
+    max-width: 560px;
+    margin: 0 auto;
+    padding-bottom: 70px;
+  }
+
+  &__img {
+    max-width: 100%;
+    min-height: 272px;
+    padding-bottom: 30px;
+  }
+
+  &__h4,
+  &__sub {
+    padding-bottom: 20px;
+  }
+
+  &__h4 {
+    font-family: "Raleway", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  &__sub {
+    font-size: 15px;
+  }
+
+  &__price {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    padding-bottom: 30px;
+    font-weight: bold;
+    color: $red;
+  }
+
+  &__desc,
+  &__sub {
+    color: $propertiesSubText;
+  }
+
+  &__desc {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    border-top: 1px solid $propertiesBorderGrey;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  &__item {
+    font-family: "Montserrat", sans-serif;
+    padding-right: 15px;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      right: 5px;
+      top: 59%;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: $propertiesSubText;
+    }
+
+    &:last-child {
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__more {
+   font-family: "Raleway", sans-serif;
+   font-weight: 700;
+    margin-top: 20px;
+    background: $red;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    padding: 18px 25px;
+    &:hover {
+      background: $red;
+    }
+  }
+}
